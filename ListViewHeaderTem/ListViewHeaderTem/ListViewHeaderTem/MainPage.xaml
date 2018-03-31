@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewHeaderTem"
+             x:Class="ListViewHeaderTem.MainPage">
+    <ListView x:Name="MainListView"
+              Header=""
+              HasUnevenRows="True"> 
+        <ListView.HeaderTemplate>
+            <DataTemplate >
+                <Grid >
+                    <Label  Text="The Header  Template"
+                            FontSize="30"
+                            BackgroundColor="Violet"
+                            TextColor="White"></Label>
+                </Grid>
+            </DataTemplate>
+        </ListView.HeaderTemplate>
+        
+        <ListView.FooterTemplate>
+            <DataTemplate >
+                <Grid >
+                    <Label  Text="The Footer Template"
+                            FontSize="30"
+                            BackgroundColor="Blue"
+                            TextColor="White"></Label>
+                </Grid>
+            </DataTemplate>
+        </ListView.FooterTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Padding="12">
+                        <Label Text="{Binding .}"
+                                FontSize="Medium"></Label>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+
+        </ListView.ItemTemplate>
+
+    </ListView>
+</ContentPage>
